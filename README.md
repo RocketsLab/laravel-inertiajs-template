@@ -7,7 +7,7 @@
 Install application dependencies.
 
 ```shell script
-composer install
+composer create-project rocketslab/laravel-inertiajs-template <project-name>
 ```
 
 Install client side dependencies and build assets.
