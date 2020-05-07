@@ -26,7 +26,7 @@
   import TextInput from '@/components/TextInput'
 
   export default {
-    metaInfo: { title: 'Login' },
+    metaInfo: { title: 'Register' },
     components: {
       LoadingButton,
       Logo,
