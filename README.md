@@ -1,5 +1,7 @@
 # Basic Laravel scafold application with Inertiajs
 
+![](https://user-images.githubusercontent.com/12722517/81354751-cf956e80-90a2-11ea-9edf-ba9a87a1d9d5.png)
+
 ## Instalation
 
 Install application dependencies.
