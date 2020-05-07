@@ -1,0 +1,14 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+@tailwind base;
+
+@import "reset";
+
+@tailwind components;
+
+@import "buttons";
+@import "form";
+@import "nprogress";
+
+@tailwind utilities;
