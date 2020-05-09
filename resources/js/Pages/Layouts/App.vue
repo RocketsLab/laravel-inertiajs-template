@@ -12,7 +12,7 @@
               <svg class="fill-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
               </svg>
-              <div slot="dropdown" class="mt-2 px-8 py-4 shadow-lg rounded" :class="$app.theme.menu.background">
+              <div slot="dropdown" class="mt-2 px-8 py-4 shadow-lg rounded menu-background">
                 <main-menu :url="url()" />
               </div>
             </dropdown>
@@ -21,22 +21,22 @@
             <div class="mt-1 mr-4">LARAVEL INERTIAJS APP</div>
             <dropdown class="mt-1" placement="bottom-end">
               <div class="flex items-center cursor-pointer select-none group">
-                <div :class="$app.theme.dropdowns.trigger">
+                <div class="dropdown-trigger">
                   <span>{{ $page.auth.user.name }}</span>
                 </div>
-                <icon :class="$app.theme.dropdowns.chevronDown" name="expand_more" />
+                <icon class="dropdown-action" name="expand_more" />
               </div>
-              <div slot="dropdown" :class="$app.theme.dropdowns.body">
-                <inertia-link :class="$app.theme.dropdowns.item" :href="'#'">My Profile</inertia-link>
-                <inertia-link :class="$app.theme.dropdowns.item" :href="route('logout')" method="post">Logout</inertia-link>
+              <div slot="dropdown" class="dropdown">
+                <inertia-link class="dropdown-item" :href="'#'">My Profile</inertia-link>
+                <inertia-link class="dropdown-item" :href="route('logout')" method="post">Logout</inertia-link>
               </div>
             </dropdown>
           </div>
         </div>
         <div class="flex flex-grow overflow-hidden">
-          <main-menu :url="url()" :class="$app.theme.menu.background" class="flex-shrink-0 w-56 p-12 hidden md:block overflow-y-auto" />
+          <main-menu :url="url()" class="menu-background flex-shrink-0 w-56 p-12 hidden md:block overflow-y-auto" />
           <div class="flex-1 px-4 py-8 md:p-12 overflow-y-auto" scroll-region>
-            <flash-messages />
+            <notify />
             <slot />
           </div>
         </div>
@@ -48,6 +48,7 @@
 <script>
 import Dropdown from '@/components/Dropdown'
 import FlashMessages from '@/components/FlashMessages'
+import Notify from "@/components/Notify"
 import Icon from '@/components/Icon'
 import Logo from '@/components/Logo'
 import MainMenu from '@/components/MainMenu'
@@ -59,6 +60,7 @@ export default {
     Icon,
     Logo,
     MainMenu,
+    Notify
   },
   data() {
     return {

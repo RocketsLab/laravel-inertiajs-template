@@ -14,3 +14,10 @@
 @import "nprogress";
 
 @import "~tailwindcss/utilities";
+
+// Import at last
+@import "themes/default-theme";
+
+@import '~vue-awesome-notifications/dist/styles/style';
+
+@import "notify";

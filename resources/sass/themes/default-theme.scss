@@ -1,0 +1,59 @@
+.background {
+    @apply bg-gray-100;
+}
+
+.menu-background {
+    @apply bg-gray-800;
+}
+
+.menu-item-active {
+    @apply text-white;
+}
+
+.menu-item {
+    @apply text-teal-400;
+
+    &:group-hover {
+        @apply text-white;
+    }
+}
+
+.login-background {
+    @apply bg-teal-900;
+}
+
+.register-background {
+    @apply bg-teal-900;
+}
+
+.dropdown-trigger {
+    @apply text-gray-700;
+
+    &:group-hover {
+        @apply text-teal-600;
+    }
+    &:focus {
+        @apply text-teal-600 mr-1 whitespace-no-wrap;
+    }
+}
+
+.dropdown-action {
+    &:group-hover {
+        @apply fill-teal-600 fill-gray-700;
+    }
+    &:focus {
+        @apply fill-teal-600;
+    }
+}
+
+.dropdown-item {
+    @apply block px-6 py-2;
+
+    &:hover {
+        @apply bg-teal-500 text-white;
+    }
+}
+
+.dropdown {
+    @apply mt-2 py-2 shadow-xl bg-white rounded text-sm;
+}

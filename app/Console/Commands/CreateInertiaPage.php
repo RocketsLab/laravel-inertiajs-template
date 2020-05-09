@@ -33,7 +33,7 @@ class CreateInertiaPage extends Command
 </template>
 
 <script>
-import Layout from '@/application/Layout'
+import Layout from '@/Pages/Layouts/App'
 
 export default {
   metaInfo: { title: '::pageName' },

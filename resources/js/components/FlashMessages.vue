@@ -27,7 +27,7 @@
                 </p>
               </div>
               <div class="ml-4 flex-shrink-0 flex">
-                <button @click="show = false" type="button"
+                <button @click="dismiss" type="button"
                         :class="{'text-green-600': hasSuccess, 'text-red-100': hasErrors}"
                         class="inline-flex focus:outline-none focus:text-gray-500 transition ease-in-out duration-150">
                   <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -48,6 +48,7 @@ export default {
   data() {
     return {
       show: true,
+      timeout: null
     }
   },
   computed: {
@@ -62,10 +63,15 @@ export default {
     '$page.flash': {
       handler() {
         this.show = true
-        setTimeout(() => this.show = false, 3500)
+        this.timeout = setTimeout(() => this.show = false, 3500)
       },
       deep: true,
     },
   },
+  methods: {
+    dismiss() {
+      clearTimeout(this.timeout);
+    }
+  }
 }
 </script>

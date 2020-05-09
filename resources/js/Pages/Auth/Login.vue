@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 min-h-screen flex justify-center items-center" :class="$app.theme.login.background">
+  <div class="p-6 min-h-screen flex justify-center items-center login-background">
     <div class="w-full max-w-md">
       <logo class="block mx-auto w-full max-w-xs fill-white" height="50" />
       <form class="mt-8 bg-white rounded-lg shadow-xl overflow-hidden" @submit.prevent="submit">

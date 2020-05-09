@@ -4,7 +4,7 @@ import Vue from 'vue'
 import VueMeta from 'vue-meta'
 import PortalVue from 'portal-vue'
 import { InertiaApp } from "@inertiajs/inertia-vue"
-import AppTheme from '@/application/Theme'
+import VueAWN from "vue-awesome-notifications"
 
 Vue.config.productionTip = false;
 Vue.mixin({
@@ -15,7 +15,23 @@ Vue.mixin({
 Vue.use(InertiaApp)
 Vue.use(PortalVue)
 Vue.use(VueMeta)
-Vue.use(AppTheme)
+Vue.use(VueAWN, {
+    position: 'top-right',
+    durations: {
+        global: 4500
+    },
+    icons: {
+        prefix: "<span class='material-icons'>",
+        suffix: "</span>",
+        tip: 'help_outline',
+        info: '',
+        success: 'check_circle_outline',
+        warning: 'error_outline',
+        alert: 'highlight_off',
+        async: 'update',
+        confirm: 'feedback'
+    }
+})
 
 let app = document.getElementById('app');
 

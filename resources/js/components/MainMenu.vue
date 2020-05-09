@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="mb-4" v-for="menu in $app.menus">
+    <div class="mb-4" v-for="menu in menus">
       <inertia-link class="flex items-center group py-2" :href="menu.route" key="menu.title">
         <icon :name="menu.icon" class="mr-2"
-              :class="isUrl(menu.isUrl) ? $app.theme.menu.icons.active : $app.theme.menu.icons.default"/>
-        <div :class="isUrl(menu.isUrl) ? $app.theme.menu.titles.active : $app.theme.menu.titles.default" v-text="menu.title"/>
+              :class="isUrl(menu.isUrl) ? 'menu-item-active' : 'menu-item'"/>
+        <div :class="isUrl(menu.isUrl) ? 'menu-item-active' : 'menu-item'" v-text="menu.title"/>
       </inertia-link>
     </div>
   </div>
@@ -16,6 +16,19 @@
   export default {
     components: {
       Icon,
+    },
+
+    data() {
+      return {
+        menus: [
+          {
+            route: '/',
+            icon: 'dashboard',
+            title: 'Home',
+            isUrl: ''
+          },
+        ]
+      }
     },
 
     props: {

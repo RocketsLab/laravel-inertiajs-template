@@ -45,6 +45,23 @@ Route::get('alert-success', function (){
 });
 
 Route::get('alert-error', function (){
-    session()->flash('error', 'Error message demo!');
+    session()->flash('error', 'Alert message demo!');
     return Redirect::back();
+});
+
+Route::get('alert-warning', function (){
+    session()->flash('warning', 'Warning message demo!');
+    return Redirect::back();
+});
+
+Route::get('alert-info', function (){
+    session()->flash('info', 'Info message demo!');
+    return Redirect::back();
+});
+
+Route::post('alert-form', function (){
+    return \Illuminate\Support\Facades\Request::validate([
+        'field1' => 'required',
+        'field2' => 'required',
+    ]);
 });
