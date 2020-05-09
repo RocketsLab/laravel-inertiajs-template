@@ -8,6 +8,10 @@
     watch: {
       '$page.flash': {
         handler() {
+
+          let type = null
+          let message = null
+
           if (this.$page.flash.success) {
             type = 'success'
             message = this.$page.flash.success
