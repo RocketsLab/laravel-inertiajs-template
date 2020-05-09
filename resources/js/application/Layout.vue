@@ -9,20 +9,22 @@
               <logo class="fill-white" width="120" height="28" />
             </inertia-link>
             <dropdown class="md:hidden" placement="bottom-end">
-              <svg class="fill-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
+              <svg class="fill-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
               <div slot="dropdown" class="mt-2 px-8 py-4 shadow-lg rounded" :class="$app.theme.menu.background">
                 <main-menu :url="url()" />
               </div>
             </dropdown>
           </div>
           <div class="bg-white border-b w-full p-4 md:py-0 md:px-12 text-sm md:text-md flex justify-between items-center">
-            <div class="mt-1 mr-4">Laravel Inertia App</div>
+            <div class="mt-1 mr-4">LARAVEL INERTIAJS APP</div>
             <dropdown class="mt-1" placement="bottom-end">
               <div class="flex items-center cursor-pointer select-none group">
                 <div :class="$app.theme.dropdowns.trigger">
                   <span>{{ $page.auth.user.name }}</span>
                 </div>
-                <icon :class="$app.theme.dropdowns.chevronDown" name="cheveron-down" />
+                <icon :class="$app.theme.dropdowns.chevronDown" name="expand_more" />
               </div>
               <div slot="dropdown" :class="$app.theme.dropdowns.body">
                 <inertia-link :class="$app.theme.dropdowns.item" :href="'#'">My Profile</inertia-link>

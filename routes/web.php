@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,4 +36,15 @@ Route::get('500', function () {
     }
 
     echo $fail;
+});
+
+//Alert demo
+Route::get('alert-success', function (){
+    session()->flash('success', 'Success message demo!');
+    return Redirect::back();
+});
+
+Route::get('alert-error', function (){
+    session()->flash('error', 'Error message demo!');
+    return Redirect::back();
 });
