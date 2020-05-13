@@ -5,6 +5,7 @@ import VueMeta from 'vue-meta'
 import PortalVue from 'portal-vue'
 import { InertiaApp } from "@inertiajs/inertia-vue"
 import VueAWN from "vue-awesome-notifications"
+import VTooltip from 'v-tooltip'
 
 Vue.config.productionTip = false;
 Vue.mixin({
@@ -12,6 +13,7 @@ Vue.mixin({
         route: window.route
     }
 })
+Vue.use(VTooltip)
 Vue.use(InertiaApp)
 Vue.use(PortalVue)
 Vue.use(VueMeta)

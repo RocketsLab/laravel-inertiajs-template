@@ -1,7 +1,4 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
-@import "animate.css/source/animate.css";
+@import "~animate.css/source/animate.css";
 
 @import "~tailwindcss/base";
 
@@ -15,9 +12,10 @@
 
 @import "~tailwindcss/utilities";
 
-// Import at last
 @import "themes/default-theme";
 
 @import '~vue-awesome-notifications/dist/styles/style';
 
 @import "notify";
+
+@import '~vue-loading-overlay/dist/vue-loading.css';
